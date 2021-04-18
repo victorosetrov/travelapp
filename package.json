@@ -1,0 +1,22 @@
+{
+  "name": "travelapp",
+  "version": "1.0.0",
+  "description": "travel app",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorosetrov/travelapp.git"
+  },
+  "author": "Viktor Osetrov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorosetrov/travelapp/issues"
+  },
+  "homepage": "https://github.com/victorosetrov/travelapp#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
