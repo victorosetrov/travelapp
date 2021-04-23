@@ -1,4 +1,5 @@
 .card {
+  // FUNCTIONALITY
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
@@ -11,9 +12,11 @@
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &--front {
       background-color: $color-white;
@@ -56,6 +59,7 @@
     transform: rotateY(0);
   }
 
+  // FRONT SIDE STYLING
   &__picture {
     background-size: cover;
     height: 23rem;
@@ -133,33 +137,34 @@
         rgba($color-tertiary-dark, 0.85)
       );
     }
+  }
 
-    &__details {
-      padding: 3rem;
+  &__details {
+    padding: 3rem;
 
-      ul {
-        list-style: none;
-        width: 80%;
-        margin: 0 auto;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
 
-        li {
-          text-align: center;
-          font-size: 1.5rem;
-          padding: 1rem;
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
 
-          &:not(:last-child) {
-            border-bottom: 1px solid $color-grey-light-2;
-          }
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
         }
       }
     }
   }
 
+  // FRONT SIDE STYLING
   &__cta {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% -50%);
+    transform: translate(-50%, -50%);
     width: 90%;
     text-align: center;
   }
@@ -180,7 +185,8 @@
     font-weight: 100;
   }
 
-  @include respond(tab-port) {
+  //@include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
@@ -205,6 +211,7 @@
       padding: 1rem 3rem;
     }
 
+    // FRONT SIDE STYLING
     &__cta {
       position: relative;
       top: 0%;
